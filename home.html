@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMinder - Home Box</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body{
+            background-image: url(homebackground.jpg);
+        }
+
+        h2{
+            font-weight: bolder;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <header>
+            <h2> Task Minder</h2>
+        </header>
+        <input type="text" id="search-bar" placeholder="Search notes...">
+        <div id="menu-buttons">
+            <button onclick="newNote()">New Note</button>
+            <button onclick="saveNote()">Saved Note</button>
+            <button onclick="deleteNote()">Delete Note</button>
+            <button onclick="viewSavedNotes()">View Saved Notes</button>
+            <button onclick="createList()">Create List</button>
+        </div>
+
+        <div id="note-container">
+            <div id="title-container">
+                <div id="editable-title" contenteditable="true" placeholder="Enter title"></div>
+            </div>
+            <div id="note-content-container">
+                <textarea id="note-content" class="note-content" placeholder="Type your note here..."></textarea>
+            </div>
+            <div id="note-buttons">
+                <button id="attachment-button">Attachment</button>
+                <button id="save-note-button">Save</button>
+                <button id="additional-features-button">Additional Features</button>
+            </div>
+        </div>
+
+        <div id="additional-features-box">
+            <button id="close-features-button">Close</button>
+            <div id="features">
+                <button onclick="changeTextColor()">Change Text Color</button>
+                <button onclick="changeTextAlignment()">Change Text Alignment</button>
+                <button onclick="startDrawing()">Start Drawing</button>
+                <button onclick="insertImage()">Insert Image</button>
+                <button onclick="toggleHighlight()">Toggle Highlight</button>
+                <button onclick="toggleBold()">Toggle Bold</button>
+                <button onclick="toggleItalic()">Toggle Italic</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-right-corner">
+        <button id="create-new">+</button>
+    </div>
+
+    <script src="script.js"></script>
+</body> 
+</html>

@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('loginbackground.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* LOGIN/SIGN UP PAGE*/
+.wrapper {
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: white;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: white;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: white;
+}
+
+.wrapper .remember-forget {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forget label input {
+    accent-color: white;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.remember-forget a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: white;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+/* HOME PAGE */
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+#sidebar header {
+    padding: 20px;
+    text-align: center;
+    background-color: transparent;
+    margin-bottom: 15px;
+}
+
+#search-bar {
+    width: 90%;
+    margin: 10px auto;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    border-radius: 15px;
+}
+
+#menu-buttons {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#menu-buttons button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #337d55;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 13px;
+}
+
+#menu-buttons button:hover {
+    background-color: #45a049;
+}
+
+.bottom-right-corner {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+#create-new {
+    background-color: #138b41;
+    color: white;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#note-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.note-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    position: absolute;
+}
+
+.note-content {
+    width: 1000px;
+    height: 900px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-right: 150px;
+}
+
+#title-container {
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#editable-title {
+    outline: none;
+    border: none;
+    font-weight: bold;
+}
+
+#note-content-container {
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.note-content {
+    width: calc(100% - 5 px);
+    height: calc(100% - 20px);
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+#note-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-left: 5px;
+}
+
+.note-container.selected {
+    border: 2px solid #3498db;
+    margin-left: 200px;
+}
+
+#attachment-button,
+#save-note-button,
+#additional-features-button {
+    margin-top: 10px;
+}
+
+.note-container.selected {
+    border: 2px solid transparent;
+    width: 1000px;
+    height: 700px;
+}
+
+/* ADDITIONAL FEATURES*/
+.btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: var(--button-background);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn-add-page {
+    background-color: var(--beige-medium);
+    color: var(--beige-dark);
+    border: 2px solid var(--beige-medium);
+    transition: transform 0.2s;
+}
+
+.btn-add-page:hover {
+    transform: scale(1.05);
+}
+
+#features {
+    width: 20vw;
+    padding: 20px;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+#notebook {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: var(--beige-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid var(--beige-medium);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#mode-switch-button {
+    margin-top: 10px;
+}
+
+.dark-mode #note-container {
+    background-color: #333;
+    color: white;
+}
